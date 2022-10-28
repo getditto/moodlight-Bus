@@ -17,6 +17,6 @@ There are two applications - one for iOS and one for Android - which display a c
 
 1. Sign up for free and create a new app in the [Portal](https://portal.ditto.live/).
 
-2. Each app created on the portal has a unique appID which can be seen on your app's settings page once the app has been created. Use this ID and replace "YOUR_AppID_TOKEN" in the app. Also, replace "Your_Token" with the playground token that was generated for you app on the portal.
+2. Each app created on the portal has a unique appID which can be seen on your app's settings page once the app has been created. Use this ID and replace "YOUR_APPID" in the app. Also, replace "YOUR_TOKEN" with the playground token that was generated for you app on the portal.
 
 3. Run one or more instances of the application.
