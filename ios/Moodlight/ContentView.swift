@@ -34,7 +34,6 @@ struct ContentView: View {
             ContentView.ViewModel.internalColor = Color(red: red/255, green: green/255, blue: blue/255)
             return ContentView.ViewModel.internalColor
             
-//            return Color(red: red, green: green, blue: blue)
         }()
         
         // Need a way to compare and prevent duplicate updates to color state
@@ -115,7 +114,7 @@ struct ContentView: View {
         
         
         func upsert(color: Color) {
-//            if let components = color.cgColor?.components, !Color.compareRGB(lhs: ContentView.ViewModel.internalColor, rhs: color) {
+
             let colors = ContentView.ViewModel.getRGBColors(components: (color.cgColor?.components)!)
                 
             DataManger.shared.updateColors(id: "5", red: colors.red, green: colors.green, blue: colors.blue)
@@ -151,18 +150,16 @@ struct ContentView: View {
                     ColorPicker("Pick a color", selection:$viewModel.color, supportsOpacity: false)
                         .foregroundColor(Color.white)
                         .font(.largeTitle)
-                        .font(Font.headline.weight(.light))                        .padding()
-                        // FOR SOME REASON didSet IS NOT CALLED BY COLOR PICKER
+                        .font(Font.headline.weight(.light))
+                        .padding()
                         .onChange(of: viewModel.color) { newColor in
-//                            if(ContentView.ViewModel.isLocalChange) {
-                                viewModel.upsert(color: viewModel.color)
-//                            }
+                            viewModel.upsert(color: viewModel.color)
                         }
                         .offset(y: 20)
-
                         
                 } else {
                     // Fallback on earlier versions
+                    // Use different color picker
                 }
                 Spacer()
                 Text("Or tap below to change color")
