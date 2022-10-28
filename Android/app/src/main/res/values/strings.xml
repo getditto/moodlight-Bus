@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Moodlight</string>
+    <string name="open_color_picker">Open color picker</string>
+    <string name="or_tap_below_for_a_random_color">Or tap below for a random color</string>
+    <string name="turn_off">turn off</string>
+    <string name="turn_on">turn on</string>
+</resources>
