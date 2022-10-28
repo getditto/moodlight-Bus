@@ -193,8 +193,8 @@ class DataManger: NSObject {
         database = try! Database(name: "Lights")
         cbListener = MessageEndpointListener(config: MessageEndpointListenerConfiguration(database: database, protocolType: .messageStream))
         do {
-            ditto = Ditto(identity: .onlinePlayground(appID: "4086b076-3288-4d2b-a454-724ce3319fe5", token: "46bbf631-5465-4390-a0d9-48c71d1c59a9", enableDittoCloudSync: true))
-//            try //ditto.setOfflineOnlyLicenseToken("o2d1c2VyX2lkaXNlYXRjaGFydGZleHBpcnl0MjAyMy0wNS0wMVQwMDowMDowMFppc2lnbmF0dXJleFh2SEEvT3VBb1poOXBzZTBGcm1XajNGTXQ2YWhHVWE5UUNSblN4V3orWFlCZFZVMU5aRDQyYjlOOU9pNnkxT1Q4Q2Fzb011d1BSVWtkc3pGS0pUKzRvUT09")
+            ditto = Ditto(identity: .onlinePlayground(appID: "YOUR_APPID", token: "YOUR_TOKEN", enableDittoCloudSync: true))
+
             try ditto.startSync()
             self.bus = DittoExperimental.busFor(ditto: ditto)
         } catch(let err) {

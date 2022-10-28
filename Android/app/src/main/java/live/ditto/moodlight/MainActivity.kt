@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity() {
         val androidDependencies = DefaultAndroidDittoDependencies(applicationContext)
         val ditto = Ditto(
             androidDependencies, DittoIdentity.OnlinePlayground(
-                androidDependencies, appID = "4086b076-3288-4d2b-a454-724ce3319fe5", token = "46bbf631-5465-4390-a0d9-48c71d1c59a9", enableDittoCloudSync = true
+                androidDependencies, appID = "YOUR_APPID", token = "YOUR_TOKEN", enableDittoCloudSync = true
             )
         )
         this.ditto = ditto
